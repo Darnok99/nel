@@ -27,6 +27,8 @@ RUN_EVAL=true
 
 LINKING_FEATURE=$RANKER_FEATURE
 
+echo "starting <<<<<<<<<<<<<<<<<<<<<<<"
+
 if $EXTRACT_FEATURES; then
     $APP extract-feature \
         --corpus $CORPUS \

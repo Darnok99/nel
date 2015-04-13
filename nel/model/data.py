@@ -39,6 +39,8 @@ class Store(object):
     def Get(store_id):
         url = os.environ.get('NEL_DATASTORE_URI', 'mongodb://localhost')
 
+        print "datastore in os is", url
+
         if url.startswith('mongodb'):
             log.debug("Using mongo data store for (%s)...", store_id)
             db, collection = store_id.split(':')

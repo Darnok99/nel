@@ -8,8 +8,7 @@
     },
     "candidate_generation": {
         "name": "CandidateGenerator",
-        "params": {
-        }
+        "params": {}
     },
     "features": [{
             "name": "EntityProbability",
@@ -31,22 +30,13 @@
         }, {
             "name":"ClassifierScore",
             "params": {
-                "classifier_id": "default"
-            }
-        }, {
-            "name":"MeanConditionalProbability",
-            "params": {
-                "ranker": "ClassifierScore[default]",
-                "occurrence_model_path": "/data0/linking/models/wikipedia.occurrence.model"
-            }
-        }, {
-            "name": "ClassifierScore",
-            "params": {
-                "classifier_id": "reranker"
+                "classifier": "/var/www/config/fast.classifier.json",
+		"provider": "file"
             }
         }
     ],
     "resolver": {
-        "feature": "ClassifierScore[reranker]"
+        "feature": "ClassifierScore[default]"
     }
 }
+

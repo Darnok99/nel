@@ -91,7 +91,10 @@ class BatchLink(object):
     
     def __call__(self):
         """Link documents """
+
+        print ">>>>>>>>>>>>>>>>>>>>>>>>corpus<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
         store = MongoClient().docs[self.corpus]
+
         flt = {}
         if self.tag != None:
             flt['tag'] = self.tag
