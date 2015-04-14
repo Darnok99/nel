@@ -1,0 +1,29 @@
+{
+  "corpus": "conll",
+  "_id": "default",
+  "weights": [
+    1.4397657301078348,
+    0.10388593821086897,
+    0.09572250938070673,
+    0.4546812340629595,
+    0.14449178718064112
+  ],
+  "mapping": {
+    "params": {
+      "features": [
+        "EntityProbability[wikipedia]",
+        "NameProbability[wikipedia]"
+      ],
+      "stds": [
+        6.837578030429232,
+        6.697552860215822
+      ],
+      "means": [
+        -16.19429549697433,
+        -13.341270370556417
+      ]
+    },
+    "name": "PolynomialMapper"
+  },
+  "tag": null
+}

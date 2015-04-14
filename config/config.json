@@ -1,0 +1,37 @@
+{
+  "tagger": {
+    "name": "StanfordTagger",
+    "params": {
+      "host": "stanford",
+      "port": 1447
+    }
+  },
+  "candidate_generation": {
+    "name": "CandidateGenerator",
+    "params": {}
+  },
+  "features": [
+    {
+      "name": "EntityProbability",
+      "params": {
+        "entity_prior_model_tag": "wikipedia"
+      }
+    },
+    {
+      "name": "NameProbability",
+      "params": {
+        "name_model_tag": "wikipedia"
+      }
+    },
+    {
+      "name": "ClassifierScore",
+      "params": {
+        "classifier": "config/classifier.json",
+        "provider": "file"
+      }
+    }
+  ],
+  "resolver": {
+    "feature": "ClassifierScore[default]"
+  }
+}

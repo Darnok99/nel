@@ -47,16 +47,19 @@ COPY /requirements.txt /var/www/requirements.txt
 RUN pip install --upgrade -r /var/www/requirements.txt
 
 
-EXPOSE 8080
+EXPOSE 12000
 
 COPY / /var/www/
 COPY start_app.sh /var/www/start_app.sh
 
 
 ENV NEL_ROOT=/var/www
-ENV NEL_DATASTORE_URI='redis://redis'
+
+# move that to configuration file
+#ENV NEL_DATASTORE_URI='redis://redis'
 
 RUN mkdir /var/www/output
 
-RUN cp /var/www/scripts/run /var/www/run.sh
 WORKDIR /var/www
+
+ENTRYPOINT /bin/bash start_app.sh

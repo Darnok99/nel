@@ -78,5 +78,4 @@ def main(args=sys.argv[1:]):
     obj()
 
 if __name__ == '__main__':
-    print "asdkjfalkdhjflksjhdaflkahjsdflkjshadflkjsahdfkljhsadkjfhkdfajslakdhjf"
     main()

@@ -9,7 +9,7 @@ then
 else
 
 HOST=0.0.0.0
-PORT=8080
+PORT=12000
 CONFIG_PATH=$1
 
 $APP service-harness $HOST $PORT OnlineLinker $CONFIG_PATH
